@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Fade</title>
+    <script src="https:/ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            $("#fadeIn").click(function() {
+                $("#div1").slideUp();
+                $("#div2").slideUp("slow");
+                $("#div3").slideUp(200);
+            });
+            $("#fadeout").click(function() {
+                $("#div1").slideDown();
+                $("#div2").slideDown("slow");
+                $("#div3").slideDown(200);
+            });
+            $("#fadeToggle").click(function() {
+                $("#div1").slideToggle();
+                $("#div2").slideToggle(200);
+            });
+        });
+    </script>
+</head>
+<body>
+    <button id="fadeIn">Click to slide up in elements</button>
+    <br>
+    <br>
+    <button id="fadeOut">Click to slide down elements</button>
+    <br>
+    <br>
+    <button id="fadeToggle">Click to slide toggle sliding</button>
+    <br><br>
+
+    <div id="div1" style="width: 50px; height: 50px; display: none; background-color: darkorange;"> </div>
+    <br>
+    <div id="div2" style="width: 50px; height: 50px; display: none; background-color: lightgray;"> </div>
+    <br>
+    <div id="div3" style="width: 50px; height: 50px; display: none; background-color: green;"></div>
+    
+</body>
+</html>
